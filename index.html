@@ -39,6 +39,23 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   </script>
+  <script type="module">
+    import { initializeApp } from "firebase/app";
+    import { getMessaging } from "firebase/messaging";
+    
+    // TODO: Replace the following with your app's Firebase project configuration
+    // See: https://firebase.google.com/docs/web/learn-more#config-object
+    const firebaseConfig = {
+      // ...
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+
+    // Initialize Firebase Cloud Messaging and get a reference to the service
+    const messaging = getMessaging(app);
+  </script>
   <script>
     function google(){
       window.location.href = "https://www.google.com";
