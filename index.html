@@ -16,6 +16,29 @@
     <h1>welcome to PanaChat!</h1>
     <input type="button" onclick="google()" value="googleへ">
   </body>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAt_ieDH4Hq6RMrZ7MmJFbhZ3B3nDZp0hA",
+    authDomain: "chatdatabase-3599e.firebaseapp.com",
+    projectId: "chatdatabase-3599e",
+    storageBucket: "chatdatabase-3599e.appspot.com",
+    messagingSenderId: "206828650255",
+    appId: "1:206828650255:web:71d06bda18f326b6c4487a",
+    measurementId: "G-EDKZRZ3BJT"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  </script>
   <script>
     function google(){
       window.location.href = "https://www.google.com";
