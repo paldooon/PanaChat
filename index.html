@@ -46,12 +46,12 @@
   <script>
     let db = firebase.firestore();
     function google(){
-      db.collection("rooms").add({
+      db.collection("Rooms").doc("Room1")({
         name:kusa,
         age:100
-      }).then((doc) => {
-        alert(`追加成功（${doc.id})`);
-      }).catch((error) => {
+      }).then(() => {
+        alert("追加成功");
+      }).catch(() => {
         alert("追加失敗");
       });
     }
