@@ -45,7 +45,7 @@
   
   <script>
     let db = firebase.firestore();
-    function google(){
+    window.onload(google(){
       db.collection("Rooms").doc("Room1")({
         name:"kusa",
         age:100
@@ -54,6 +54,6 @@
       }).catch(() => {
         alert("追加失敗");
       });
-    }
+    });
   </script>
 </html>
