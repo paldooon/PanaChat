@@ -44,8 +44,16 @@
   
   
   <script>
+    let db = firebase.firestore();
     function google(){
-      window.location.href = "https://www.google.com";
+      db.collection("rooms").add({
+        name:kusa,
+        age:100
+      }).then((doc) => {
+        alert(`追加成功（${doc.id})`);
+      }).catch((error) => {
+        alert("追加失敗");
+      });
     }
   </script>
 </html>
