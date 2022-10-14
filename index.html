@@ -47,7 +47,7 @@
     let db = firebase.firestore();
     function google(){
       db.collection("Rooms").doc("Room1")({
-        name:kusa,
+        name:"kusa",
         age:100
       }).then(() => {
         alert("追加成功");
