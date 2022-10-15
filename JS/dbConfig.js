@@ -1,5 +1,5 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-let config = {
+const config = {
   apiKey: "AIzaSyCs14YKX_3Yl-xoPF-z8HyKbpgMVlvteyw",
   authDomain: "chatdatabase-16886.firebaseapp.com",
   projectId: "chatdatabase-16886",
