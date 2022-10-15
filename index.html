@@ -13,7 +13,7 @@
     <title>ホーム</title>
   </head>
   <body>
-    <h1>welcome to PanaChat!</h1>
+    <h1 id="h1">welcome to PanaChat!</h1>
     <input type="button" onclick="add()" value="googleへ">
   </body>
   
@@ -28,9 +28,9 @@
         name:"kusa",
         age:100
       }).then(() => {
-        alert("追加成功");
+        document.getElementById("h1").innerHTML = "追加成功";
       }).catch(() => {
-        alert("追加失敗");
+        document.getElementById("h1").innerHTML = "追加失敗";
       }
     };
   </script>
