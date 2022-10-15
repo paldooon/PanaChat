@@ -24,7 +24,7 @@
   <script>
     let db = firebase.firestore();
     function add(){
-      db.collection("Rooms").doc("Room1")({
+      db.collection("Rooms").doc("Room1").set({
         name:"kusa",
         age:"100"
       }).then(() => {
