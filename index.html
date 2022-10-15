@@ -23,7 +23,25 @@
   
   <script>
     let db = firebase.firestore();
-    function add(){
+function add(){
+  
+db.collection("Rooms").doc("Room3").set({
+    name: "Los Angeles",
+    state: "CA",
+    country: "USA"
+})
+.then(function() {
+    console.log("Document successfully written!");
+})
+.catch(function(error) {
+    console.error("Error writing document: ", error);
+});
+  
+}
+    
+    
+    
+    /*function add(){
       db.collection("Rooms").doc("Room1").set({
         name:"kusa",
         age:"100"
@@ -32,6 +50,6 @@
       }).catch(() => {
         document.getElementById("h1").innerHTML = "追加失敗";
       }
-    }
+    }*/
   </script>
 </html>
