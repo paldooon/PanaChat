@@ -14,7 +14,7 @@
   </head>
   <body>
     <h1>welcome to PanaChat!</h1>
-    <input type="button" onclick="google()" value="googleへ">
+    <input type="button" onclick="add()" value="googleへ">
   </body>
   
   <script src="./dbConfig.js"></script>
@@ -23,7 +23,7 @@
   
   <script>
     let db = firebase.firestore();
-    window.onload = function(){
+    function add(){
       db.collection("Rooms").doc("Room1")({
         name:"kusa",
         age:100
