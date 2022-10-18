@@ -39,4 +39,18 @@
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
   </script>
+  <script>
+    // Add a new document in collection "cities"
+    db.collection("Rooms").doc("Room1").set({
+        name: "Los Angeles",
+        state: "CA",
+        country: "USA"
+    })
+    .then(() => {
+        console.log("Document successfully written!");
+    })
+    .catch((error) => {
+        console.error("Error writing document: ", error);
+    });
+  </script>
 </html>
