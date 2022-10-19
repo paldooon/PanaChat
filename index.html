@@ -77,9 +77,10 @@
           let data = doc.data();
           list.push(doc.id,data.name,data.content,data.time);
           for(let i=0;i<list.length;i++){
+            let lastTR = table.lastElementChild;
             let td = document.createElement("td");
             td.innerHTML = list[i];
-            tr.appendChild(td);
+            lastTR.appendChild(td);
           };
         });
       }).catch(() => {
