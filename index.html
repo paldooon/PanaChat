@@ -19,6 +19,7 @@
     <button onclick="addComment()">post</button>
     <button onclick="receive()">receive</button>
     <div id="parent"></div>
+    <table id="table"></table>
   </body>
   <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
@@ -58,10 +59,20 @@
       });
     }
     function receive(){
-      db.collection("comments").get().then( (query) => {
+      db.collection("comments").get().then((query) => {
         let list = [];
-        query.forEa
-          
+        let table = document.getElementById("table");
+        query.forEach((doc) => {
+          let tr = document.createElement("tr");
+          table.appendChild(tr);
+          let data = doc.data();
+          list.push([doc.id,data.name,data.content,data.time]);
+          for(let i=0;i<list.length;i++){
+            let td = document.createElement("td");
+            td.innerHTML = list[i];
+            tr.appendChild(td);
+          }
+        }
       }
     }
     init();
