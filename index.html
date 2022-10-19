@@ -19,7 +19,14 @@
     <button onclick="addComment()">post</button>
     <button onclick="receive()">receive</button>
     <div id="parent"></div>
-    <table id="table"></table>
+    <table id="table">
+      <tr>
+        <th>ID</th>
+        <th>name</th>
+        <th>content</th>
+        <th>time</th>
+      </tr>
+    </table>
   </body>
   <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
