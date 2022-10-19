@@ -14,7 +14,9 @@
   </head>
   <body>
     <h1 id="h1">welcome to PanaChat!</h1>
-    <input type="button" onclick="add()" value="ぽう">
+    <input type="text" placeholder="name" id="u">
+    <input type="text" placeholder="text" id="t">
+    <button onclick="addComment()">post</button>
     <div id="parent"></div>
   </body>
   <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
@@ -33,11 +35,12 @@
       firebase.initializeApp(firebaseConfig);
       db = firebase.firestore();
     }
-    function add(){
+    function addComment(){
+      let user = document.getElementById("u");
+      let text = document.getElementById("t");
       db.collection("Regions").doc("Region1").set({
-        name: "Los Angeles",
-        state: "CA",
-        country: "USA"
+        name: user,
+        content: text
       })
       .then(() => {
         let parent = document.getElementById("parent");
