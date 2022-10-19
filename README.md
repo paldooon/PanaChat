@@ -9,3 +9,4 @@ This will get bigger day by day.
 
 ## My using functions
 - firebase v8.8.0
+- ServiceWorker
