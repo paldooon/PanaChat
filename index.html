@@ -17,6 +17,7 @@
     <input type="text" placeholder="name" id="u">
     <input type="text" placeholder="text" id="t">
     <button onclick="addComment()">post</button>
+    <button onclick="receive()">receive</button>
     <div id="parent"></div>
   </body>
   <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
@@ -55,6 +56,13 @@
         child.innerHTML = "Error writing document";
         parent.appendChild(child);
       });
+    }
+    function receive(){
+      db.collection("comments").get().then( (query) => {
+        let list = [];
+        query.forEa
+          
+      }
     }
     init();
   </script>
