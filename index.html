@@ -15,6 +15,7 @@
   <body>
     <h1 id="h1">welcome to PanaChat!</h1>
     <input type="button" onclick="add()" value="ぽう">
+    <div id="parent"></div>
   </body>
   <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
@@ -39,10 +40,16 @@
         country: "USA"
       })
       .then(() => {
-        alert("Document successfully written!");
+        let parent = document.getElementById("parent");
+        let child = document.createElement("p");
+        child.innerHTML = "Document successfully written!";
+        parent.appendChild(child);
       })
-      .catch((error) => {
-        alert("Error writing document: ", error);
+      .catch(() => {
+        let parent = document.getElementById("parent");
+        let child = document.createElement("p");
+        child.innerHTML = "Error writing document";
+        parent.appendChild(child);
       });
     }
     init();
