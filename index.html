@@ -36,11 +36,12 @@
       db = firebase.firestore();
     }
     function addComment(){
-      let user = document.getElementById("u");
-      let text = document.getElementById("t");
+      let user = document.getElementById("u").value;
+      let text = document.getElementById("t").value;
       db.collection("Rooms").doc("Room1").set({
-        name: user.value,
-        content: text.value
+        name: user,
+        content: text,
+        time: firebase.firestore.FieldValue.serverTimestamp()
       })
       .then(() => {
         let parent = document.getElementById("parent");
