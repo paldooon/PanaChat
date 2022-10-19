@@ -70,9 +70,10 @@
           let data = doc.data();
           list.push([doc.id,data.name,data.content,data.time]);
           for(let i=0;i<list.length;i++){
+            let pNode = document.getElementsByTagName("tr")[i];
             let td = document.createElement("td");
             td.innerHTML = list[i];
-            tr.appendChild(td);
+            pNode.appendChild(td);
           };
           list = [];
         });
