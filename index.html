@@ -39,8 +39,8 @@
       let user = document.getElementById("u");
       let text = document.getElementById("t");
       db.collection("Rooms").doc("Room1").set({
-        name: user,
-        content: text
+        name: user.value,
+        content: text.value
       })
       .then(() => {
         let parent = document.getElementById("parent");
