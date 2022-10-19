@@ -69,20 +69,18 @@
     
     function receive(){
       db.collection("comments").get().then((query) => {
-        let list = [];
         let table = document.getElementById("table");
         query.forEach((doc) => {
+          let list = [];
           let tr = document.createElement("tr");
           table.appendChild(tr);
           let data = doc.data();
           list.push([doc.id,data.name,data.content,data.time]);
           for(let i=0;i<list.length;i++){
-            let pNode = document.getElementsByTagName("tr")[i];
             let td = document.createElement("td");
             td.innerHTML = list[i];
-            pNode.appendChild(td);
+            tr.appendChild(td);
           };
-          list = [];
         });
       }).catch(() => {
         let parent = document.getElementById("parent");
