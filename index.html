@@ -75,7 +75,7 @@
           let tr = document.createElement("tr");
           table.appendChild(tr);
           let data = doc.data();
-          list.push([doc.id,data.name,data.content,data.time]);
+          list.push(doc.id,data.name,data.content,data.time);
           for(let i=0;i<list.length;i++){
             let td = document.createElement("td");
             td.innerHTML = list[i];
