@@ -37,6 +37,7 @@
       firebase.initializeApp(firebaseConfig);
       db = firebase.firestore();
     }
+    
     function addComment(){
       let user = document.getElementById("u").value;
       let text = document.getElementById("t").value;
@@ -58,6 +59,7 @@
         parent.appendChild(child);
       });
     }
+    
     function receive(){
       db.collection("comments").get().then((query) => {
         let list = [];
@@ -72,6 +74,7 @@
             td.innerHTML = list[i];
             tr.appendChild(td);
           }
+          list = [];
         }
       }
     }
