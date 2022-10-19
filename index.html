@@ -38,7 +38,7 @@
     function addComment(){
       let user = document.getElementById("u").value;
       let text = document.getElementById("t").value;
-      db.collection("Rooms").doc("Room1").set({
+      db.collection("comments").doc("comment1").set({
         name: user,
         content: text,
         time: firebase.firestore.FieldValue.serverTimestamp()
