@@ -91,5 +91,13 @@
       });
     }
     init();
+    const check = db.collection("comments")
+      .onSnapshot(querySnapshot => {
+        querySnapshot.docChanges().forEach(docChange => {
+          if(docChange.type = "added"){
+            receive();
+          }
+        });
+      });
   </script>
 </html>
