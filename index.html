@@ -93,7 +93,7 @@
     init();
     let check = db.collection("comments")
       .onSnapshot(querySnapshot => {
-        querySnapshot.docChanges(docChange => {
+        querySnapshot.docChanges.forEach(docChange => {
           if(docChange.type = "added"){
             receive();
           }
